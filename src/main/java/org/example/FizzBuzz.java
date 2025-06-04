@@ -14,7 +14,7 @@ public class FizzBuzz {
             }
         }
     }
-
+// коммент
     public static void main(String[] args) {
         fizzBuzz(20);
     }
