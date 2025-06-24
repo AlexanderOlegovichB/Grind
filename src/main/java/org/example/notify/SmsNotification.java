@@ -1,4 +1,4 @@
-package notify;
+package org.example.notify;
 
 public class SmsNotification extends Notification {
     private String phone;
@@ -16,5 +16,9 @@ public class SmsNotification extends Notification {
     public void send() {
         System.out.println("Sending SMS to: " + phone);
         super.send();
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

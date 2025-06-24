@@ -1,5 +1,4 @@
-package notify;
-import notify.Priority;
+package org.example.notify;
 
 public class Notification {
     private final int id;
@@ -8,9 +7,7 @@ public class Notification {
     private static int nextId = 1;
 
     public Notification() {
-        this.id = nextId++;
-        this.message = "empty";
-        this.priority = Priority.NORMAL;
+        this("empty", Priority.NORMAL);
     }
 
     public Notification(String message, Priority priority) {
@@ -20,11 +17,11 @@ public class Notification {
     }
 
     public void send() {
-        System.out.println("Notification:  " + message + " " + "Priority: " + priority);
+        System.out.println(toString());
     }
 
     public void send(String extra) {
-        System.out.println("Notification:  " + message + " " + "Priority:" + priority + "Extra: " + extra);
+        System.out.println(toString() + "Extra: " + extra);
     }
 
     @Override
@@ -42,5 +39,13 @@ public class Notification {
 
     public Priority getPriority() {
         return priority;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public void setPriority(Priority priority) {
+        this.priority = priority;
     }
 }

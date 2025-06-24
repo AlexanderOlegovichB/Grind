@@ -1,5 +1,4 @@
-package notify;
-import notify.Priority;
+package org.example.notify;
 
 public class Demo {
     public static void main(String[] args) {

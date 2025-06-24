@@ -1,4 +1,4 @@
-package notify;
+package org.example.notify;
 
 public class EmailNotification extends Notification {
     private String email;
@@ -10,6 +10,10 @@ public class EmailNotification extends Notification {
 
     public String getEmail() {
         return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
