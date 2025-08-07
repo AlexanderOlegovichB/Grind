@@ -1,6 +1,6 @@
 package org.example.notify;
 
-public class Notification {
+abstract class Notification implements Sendable {
     private final int id;
     private String message;
     private Priority priority;
@@ -16,9 +16,7 @@ public class Notification {
         this.priority = priority;
     }
 
-    public void send() {
-        System.out.println(toString());
-    }
+    public abstract void send();
 
     public void send(String extra) {
         System.out.println(toString() + "Extra: " + extra);
@@ -40,6 +38,8 @@ public class Notification {
     public Priority getPriority() {
         return priority;
     }
+
+
 
     public void setMessage(String message) {
         this.message = message;

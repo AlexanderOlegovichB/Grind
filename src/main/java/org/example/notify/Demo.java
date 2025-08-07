@@ -5,7 +5,12 @@ public class Demo {
         Notification[] notifications = {
                 new SmsNotification("+79991234567", "1234"),
                 new EmailNotification("admin@company.com", "Отчёт готов"),
-                new Notification("Сообщение", Priority.NORMAL)
+                new Notification("Сообщение", Priority.NORMAL) {
+                    @Override
+                    public void send() {
+
+                    }
+                }
         };
 
         for (Notification notification : notifications) {
