@@ -1,6 +1,6 @@
 package org.example.notify;
 
-abstract class Notification implements Sendable {
+public abstract class Notification implements Sendable {
     private final int id;
     private String message;
     private Priority priority;
@@ -38,7 +38,6 @@ abstract class Notification implements Sendable {
     public Priority getPriority() {
         return priority;
     }
-
 
 
     public void setMessage(String message) {
