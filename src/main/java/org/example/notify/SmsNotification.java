@@ -15,7 +15,6 @@ public class SmsNotification extends Notification {
     @Override
     public void send() {
         System.out.println("Sending SMS to: " + phone);
-        super.send();
     }
 
     public void setPhone(String phone) {
